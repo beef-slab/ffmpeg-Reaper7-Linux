@@ -3,7 +3,7 @@ A ffmpeg library that will add ffmpeg to Reaper 7 if you are using a Debian base
 
 Installation Steps:
 1.  Backup your reaper stuff, I'm not a software engineer, I used ChatGPT to make this.
-2.  Extract the .so files and paste them into the reaper directory with the executable, mine is in ~/opt/REAPER on Linux Mint.
+2.  Put the .so files into the reaper directory with the executable, mine is in ~/opt/REAPER on Linux Mint.
 3.  Launch reaper with the following command after you fill in your file paths: LD_LIBRARY_PATH="/path/to/reaper/directory:$LD_LIBRARY_PATH" /path/to/reaper/executable
 4.  You can add the command from step 3 into a script that lanches Reaper with ffmpeg everytime. For my setup I have the Reaper .desktop file point to a script that launches Reaper       with ffmpeg and some Pipewire JACK compatibility stuff. Make sure you add "export" if you make a script so it would look like:                                                         export LD_LIBRARY_PATH="/path/to/reaper/directory:$LD_LIBRARY_PATH" /path/to/reaper/executable
 
